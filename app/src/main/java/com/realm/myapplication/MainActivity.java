@@ -61,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void execute(Realm realm) {
                         //results.deleteAllFromRealm();
-                        refreshList();
+                        // refreshList();
+                        new BgWork(getApplicationContext()).execute();
+
                     }
                 });
             }
